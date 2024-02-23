@@ -22,7 +22,7 @@ app.use(express.urlencoded({ extended: true }))
 
 // Home Route
 app.get('/', function (request, response) {
-    rresponse.status(200).json({ msg: 'This api has routes', routes: [{ "/get": "POST" }, { "/signup": "POST" }, { "/edit": "POST" }, { "/delete": "POST" }, { "/signin": "POST" }, { "/verify": "POST" }] })
+    response.status(200).json({ msg: 'This api has routes', routes: [{ "/get": "POST" }, { "/signup": "POST" }, { "/edit": "POST" }, { "/delete": "POST" }, { "/signin": "POST" }, { "/verify": "POST" }] })
 })
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
