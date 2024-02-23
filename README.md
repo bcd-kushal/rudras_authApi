@@ -10,7 +10,7 @@ API endpoint: https://auth.rudrakumarmishra.com/
 Send API call to different routes
 
 ### In JavaScript
-```bash
+```javascript
 const url = 'https://auth.rudrakumarmishra.com/';
 
 // Make a GET request
@@ -32,7 +32,7 @@ fetch(url, {
 ```
 
 ### In Python
-```bash
+```python
 import requests
 
 url = 'https://auth.rudrakumarmishra.com/'
