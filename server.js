@@ -28,6 +28,13 @@ app.get('/', function (request, response) {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // User Routes -----------------------------------------------------------
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+app.post("/getAll", async (request, response) => {
+    try {
+        let { data, error } = await supabase.from('Users').select("*")
+        if (error) { response.status(200).json({ error: "Syntax error found." }) } else { response.status(302).json({ success: "Found Users", users: data }) }
+    } catch { response.status(200).json({ error: "Syntax error found." }) }
+})
+
 app.post("/get", async (request, response) => {
     try {
         // Getting Post Parameters
